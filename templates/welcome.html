@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Agricultural</title>
+ 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/3.4/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+    
+  </head>
+  <style> 
+        body {
+        background-image: url("/static/img.jpg");
+        background-position: center;
+        background-size: cover;
+        position: relative;
+
+        }
+        </style>
+ 
+  <body>
+ 
+  
+
+        <h1>Id:</h1>324<br>
+        <h2>Select Crop:</h2>
+        
+        <select  id="sel" onchange="change()" onclick="change()" ><br>
+            <option value=1 selected>Barley</option>
+            <option value=2>Onion</option>
+            <option value=3>Maize</option>
+            <option value=4>Cabbage</option>
+            <option value=5>Melon</option>
+          </select>
+          <button value="Okay" onclick="rd()">Check Moisture Content</button>
+
+          <h2>Moisture Content:</h2>
+          <input type="text" id="srt"><br>
+
+    <script>
+    var crop=document.getElementById("sel").value;
+
+
+    function change() {
+        var crop = document.getElementById("sel").value;
+        if(crop==1)
+    document.getElementById("srt").value=450;
+    else if(crop==2)
+    document.getElementById("srt").value=300;
+    else if(crop==3)
+    document.getElementById("srt").value=450;
+    else if(crop==4)
+    document.getElementById("srt").value=350;
+    else if (crop==5)
+    document.getElementById("srt").value=400;
+    }
+
+    function rd()
+    {
+        setTimeout(alertFunc, 3000);
+    }
+    function alertFunc()
+    {
+        var x = Math.floor((Math.random() * 250) + 1);
+        document.getElementById("srt").value = x;
+        alert("Value below threshold. Plese start the pump");
+    }
+</script>
+    
+</script>
+ 
+      <footer class="footer" style="color: black">
+          <p>&copy; IoT Group 2</p>
+      </footer>
+ 
+
+  </body>
+
+</html>
